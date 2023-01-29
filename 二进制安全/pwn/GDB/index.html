@@ -1240,8 +1240,14 @@ pdisass: Compatibility layer for PEDA's pdisass command.</p>
 
 x/20gx  十六进制,一单位8字节
 x/20gc  字符
-x 是 examine 的缩写
+
 n表示要显示的内存单元的个数
+
+u表示一个地址单元的长度
+b表示单字节，
+h表示双字节，
+w表示四字节，
+g表示八字节
 
 f表示显示方式, 可取如下值
 x 按十六进制格式显示变量。
@@ -1253,12 +1259,6 @@ a 按十六进制格式显示变量。
 i 指令地址格式
 c 按字符格式显示变量。
 f 按浮点数格式显示变量。
-
-u表示一个地址单元的长度
-b表示单字节，
-h表示双字节，
-w表示四字节，
-g表示八字节
 </code></pre></div>
 <h2 id="snsini">s/n/si/ni</h2>
 <p>si:step in  进入函数，汇编级别
