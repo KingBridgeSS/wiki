@@ -9,24 +9,24 @@
       
       
       
-        <link rel="prev" href="../cdecl/">
+        <link rel="prev" href="../cheat%20engine/">
       
       
-        <link rel="next" href="../%E5%85%AB%E8%82%A1%E6%96%87/">
+        <link rel="next" href="../x64dbg/">
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
     
     
       
-        <title>GDB - BRIdGE's wiki</title>
+        <title>IDA - BRIdGE's wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.558e4712.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/override.css">
+      <link rel="stylesheet" href="../../css/override.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,11 +68,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#gdb" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -85,7 +80,7 @@
 
 <header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="BRIdGE&#39;s wiki" class="md-header__button md-logo" aria-label="BRIdGE's wiki" data-md-component="logo">
+    <a href="../.." title="BRIdGE&#39;s wiki" class="md-header__button md-logo" aria-label="BRIdGE's wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -104,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GDB
+              IDA
             
           </span>
         </div>
@@ -170,7 +165,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         Home
       </a>
     </li>
@@ -186,7 +181,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../Web%E5%AE%89%E5%85%A8/" class="md-tabs__link">
+      <a href="../../Web%E5%AE%89%E5%85%A8/" class="md-tabs__link">
         Web安全
       </a>
     </li>
@@ -220,7 +215,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../Misc/nonebot/" class="md-tabs__link">
+      <a href="../../Misc/nonebot/" class="md-tabs__link">
         Misc
       </a>
     </li>
@@ -254,7 +249,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="BRIdGE&#39;s wiki" class="md-nav__button md-logo" aria-label="BRIdGE's wiki" data-md-component="logo">
+    <a href="../.." title="BRIdGE&#39;s wiki" class="md-nav__button md-logo" aria-label="BRIdGE's wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -300,7 +295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         BRIdGE's wiki
       </a>
     </li>
@@ -349,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Web%E5%AE%89%E5%85%A8/" class="md-nav__link">
+      <a href="../../Web%E5%AE%89%E5%85%A8/" class="md-nav__link">
         Web安全
       </a>
     </li>
@@ -390,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Web%E5%AE%89%E5%85%A8/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/CVE-2022-44262%20ff4j%E7%89%B9%E6%AE%8A%E7%B1%BB%E5%AE%9E%E4%BE%8B%E5%8C%96/" class="md-nav__link">
+      <a href="../../Web%E5%AE%89%E5%85%A8/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/CVE-2022-44262%20ff4j%E7%89%B9%E6%AE%8A%E7%B1%BB%E5%AE%9E%E4%BE%8B%E5%8C%96/" class="md-nav__link">
         CVE-2022-44262 ff4j特殊类实例化
       </a>
     </li>
@@ -438,7 +433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Web%E5%AE%89%E5%85%A8/Java/Java%20Serialization%20Chains/" class="md-nav__link">
+      <a href="../../Web%E5%AE%89%E5%85%A8/Java/Java%20Serialization%20Chains/" class="md-nav__link">
         Java Serialization Chains
       </a>
     </li>
@@ -452,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Web%E5%AE%89%E5%85%A8/Java/tabby/" class="md-nav__link">
+      <a href="../../Web%E5%AE%89%E5%85%A8/Java/tabby/" class="md-nav__link">
         tabby
       </a>
     </li>
@@ -466,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Web%E5%AE%89%E5%85%A8/Java/FastJSON/" class="md-nav__link">
+      <a href="../../Web%E5%AE%89%E5%85%A8/Java/FastJSON/" class="md-nav__link">
         FastJSON
       </a>
     </li>
@@ -480,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Web%E5%AE%89%E5%85%A8/Java/MemoryShell/" class="md-nav__link">
+      <a href="../../Web%E5%AE%89%E5%85%A8/Java/MemoryShell/" class="md-nav__link">
         MemoryShell
       </a>
     </li>
@@ -501,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Web%E5%AE%89%E5%85%A8/HTTP%E8%AF%B7%E6%B1%82%E8%B5%B0%E7%A7%81/" class="md-nav__link">
+      <a href="../../Web%E5%AE%89%E5%85%A8/HTTP%E8%AF%B7%E6%B1%82%E8%B5%B0%E7%A7%81/" class="md-nav__link">
         HTTP请求走私
       </a>
     </li>
@@ -596,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Web%E5%AE%89%E5%85%A8/CTF/Write-Ups%26%E5%A4%8D%E7%8E%B0/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/RWCTF_The%20Cult%20of%208bit/" class="md-nav__link">
+      <a href="../../Web%E5%AE%89%E5%85%A8/CTF/Write-Ups%26%E5%A4%8D%E7%8E%B0/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/RWCTF_The%20Cult%20of%208bit/" class="md-nav__link">
         RWCTF2023 The Cult of 8bit
       </a>
     </li>
@@ -644,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Web%E5%AE%89%E5%85%A8/CTF/Write-Ups%26%E5%A4%8D%E7%8E%B0/etc/RWCTF_ASTLIBRA/" class="md-nav__link">
+      <a href="../../Web%E5%AE%89%E5%85%A8/CTF/Write-Ups%26%E5%A4%8D%E7%8E%B0/etc/RWCTF_ASTLIBRA/" class="md-nav__link">
         RWCTF ASTLIBRA
       </a>
     </li>
@@ -672,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Web%E5%AE%89%E5%85%A8/CTF/Write-Ups%26%E5%A4%8D%E7%8E%B0/%E5%B8%B8%E7%94%A8payload/" class="md-nav__link">
+      <a href="../../Web%E5%AE%89%E5%85%A8/CTF/Write-Ups%26%E5%A4%8D%E7%8E%B0/%E5%B8%B8%E7%94%A8payload/" class="md-nav__link">
         常用payload
       </a>
     </li>
@@ -742,178 +737,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          GDB
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../GDB/" class="md-nav__link">
         GDB
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    反汇编
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#x" class="md-nav__link">
-    x命令
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#snsini" class="md-nav__link">
-    s/n/si/ni
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#info-b" class="md-nav__link">
-    info b
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#break-b" class="md-nav__link">
-    break – b
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delete-d" class="md-nav__link">
-    delete – d
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#watch" class="md-nav__link">
-    watch ，可以加条件
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clear" class="md-nav__link">
-    clear
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kbt" class="md-nav__link">
-    k/bt
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#print" class="md-nav__link">
-    print
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dumpargs" class="md-nav__link">
-    dumpargs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#context" class="md-nav__link">
-    context
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#canary" class="md-nav__link">
-    canary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#telescope" class="md-nav__link">
-    telescope
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hexdump" class="md-nav__link">
-    hexdump
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dt-type" class="md-nav__link">
-    dt [type]
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#print-x-function_name" class="md-nav__link">
-    print /x &amp;function_name
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gotplt" class="md-nav__link">
-    got/plt
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fsbase" class="md-nav__link">
-    fsbase
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -939,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%B0%8F%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+      <a href="../pwn%E5%B0%8F%E5%B7%A5%E5%85%B7/" class="md-nav__link">
         小工具
       </a>
     </li>
@@ -955,6 +783,56 @@
     <li class="md-nav__item">
       <a href="../%E6%A0%88%E8%BF%81%E7%A7%BB/" class="md-nav__link">
         Stack Exchange
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheat%20engine/" class="md-nav__link">
+        Cheat engine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        IDA
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x64dbg/" class="md-nav__link">
+        X64dbg
       </a>
     </li>
   
@@ -1016,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Misc/nonebot/" class="md-nav__link">
+      <a href="../../Misc/nonebot/" class="md-nav__link">
         nonebot
       </a>
     </li>
@@ -1030,7 +908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Misc/HTTPS/" class="md-nav__link">
+      <a href="../../Misc/HTTPS/" class="md-nav__link">
         HTTPS
       </a>
     </li>
@@ -1044,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Misc/hyper%20V/" class="md-nav__link">
+      <a href="../../Misc/hyper%20V/" class="md-nav__link">
         打开/关闭hyper V
       </a>
     </li>
@@ -1058,8 +936,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Misc/%E5%8F%A4%E5%85%B8%E9%9F%B3%E4%B9%90%E5%B8%B8%E8%A7%81%E6%9B%B2%E5%BC%8F%E5%92%8C%E7%BB%93%E6%9E%84/" class="md-nav__link">
+      <a href="../../Misc/%E5%8F%A4%E5%85%B8%E9%9F%B3%E4%B9%90%E5%B8%B8%E8%A7%81%E6%9B%B2%E5%BC%8F%E5%92%8C%E7%BB%93%E6%9E%84/" class="md-nav__link">
         古典音乐常见曲式和结构
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Misc/tmux/" class="md-nav__link">
+        Tmux
       </a>
     </li>
   
@@ -1089,149 +981,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    反汇编
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#x" class="md-nav__link">
-    x命令
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#snsini" class="md-nav__link">
-    s/n/si/ni
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#info-b" class="md-nav__link">
-    info b
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#break-b" class="md-nav__link">
-    break – b
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#delete-d" class="md-nav__link">
-    delete – d
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#watch" class="md-nav__link">
-    watch ，可以加条件
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clear" class="md-nav__link">
-    clear
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kbt" class="md-nav__link">
-    k/bt
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#print" class="md-nav__link">
-    print
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dumpargs" class="md-nav__link">
-    dumpargs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#context" class="md-nav__link">
-    context
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#canary" class="md-nav__link">
-    canary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#telescope" class="md-nav__link">
-    telescope
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hexdump" class="md-nav__link">
-    hexdump
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dt-type" class="md-nav__link">
-    dt [type]
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#print-x-function_name" class="md-nav__link">
-    print /x &amp;function_name
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gotplt" class="md-nav__link">
-    got/plt
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fsbase" class="md-nav__link">
-    fsbase
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1247,100 +996,15 @@
 
 
 
-<h1 id="gdb">GDB</h1>
-<h2 id="_1">反汇编</h2>
-<p>disass [function] 
-pdisass: Compatibility layer for PEDA's pdisass command.</p>
-<h2 id="x">x命令</h2>
-<div class="highlight"><pre><span></span><code>x/nfu
-
-x/20gx  十六进制,一单位8字节
-x/20gc  字符
-
-n表示要显示的内存单元的个数
-
-u表示一个地址单元的长度
-b表示单字节，
-h表示双字节，
-w表示四字节，
-g表示八字节
-
-f表示显示方式, 可取如下值
-x 按十六进制格式显示变量。
-d 按十进制格式显示变量。
-u 按十进制格式显示无符号整型。
-o 按八进制格式显示变量。
-t 按二进制格式显示变量。
-a 按十六进制格式显示变量。
-i 指令地址格式
-c 按字符格式显示变量。
-f 按浮点数格式显示变量。
-</code></pre></div>
-<h2 id="snsini">s/n/si/ni</h2>
-<p>si:step in  进入函数，汇编级别
-ni:next 不进入函数，汇编级别
-s/n c语言级别，开了调试</p>
-<p>fin(finish)结束函数</p>
-<h2 id="info-b">info b</h2>
-<p>查看断点</p>
-<h2 id="break-b">break – b</h2>
-<div class="highlight"><pre><span></span><code>break &lt;address&gt; 指定地址下断点 (最常用)，如
-
-break 在所选栈帧中执行的下一条指令处设置断点。
-break &lt;function&gt; 函数入口处设置断电
-break &lt;line&gt; 源文件指定行下断点
-break -N break +N 在源代码文件当前行的偏移 N 下断点。
-break &lt;filename:line&gt; 在源码文件 filename 的 line 行处打断点。
-break &lt;filename:function&gt; 在源码文件 filename 的 function 函数入口处打断点。
-break ... if &lt;cond&gt; 设置条件断点，... 代表上述参数之一（或无参数），cond 为条件表达式，仅在 cond 值非零时停住程序。
-</code></pre></div>
-<h2 id="delete-d">delete – d</h2>
-<p>删除断点</p>
-<h2 id="watch">watch ，可以加条件</h2>
-<p>watch $eax == 0x0000ffaa</p>
-<h2 id="clear">clear</h2>
-<p>在指定行或函数处清除断点。参数可以是行号，函数名称或 <code>*</code> 跟一个地址。</p>
-<h2 id="kbt">k/bt</h2>
-<p>查看backtrace
-bt 打印整个栈的回溯，每个栈帧一行。
-bt n 类似于上，但只打印最内层的 n 个栈帧。
-bt -n 类似于上，但只打印最外层的 n 个栈帧。
-bt full n 类似于 bt n，还打印局部变量的值</p>
-<h2 id="print">print</h2>
-<p>print – p
-求表达式 expr 的值并打印。可访问的变量是所选栈帧的词法环境，以及范围为全局或整个文件的所有变量。</p>
-<p>print [expr]
-print /f [expr] 通过指定 /f 来选择不同的打印格式，其中 f 是一个指定格式的字母</p>
-<h2 id="dumpargs">dumpargs</h2>
-<div class="highlight"><pre><span></span><code>打印参数
-</code></pre></div>
-<h2 id="context">context</h2>
-<div class="highlight"><pre><span></span><code>默认视图
-</code></pre></div>
-<h2 id="canary">canary</h2>
-<h2 id="telescope">telescope</h2>
-<p>usage: telescope [-h] [address] [count]
-Recursively dereferences pointers starting at the specified address ($sp by default)</p>
-<p>search</p>
-<div class="highlight"><pre><span></span><code>找东西
-</code></pre></div>
-<p>retaddr
-    Print out the stack addresses that contain return addresses.</p>
-<h2 id="hexdump">hexdump</h2>
-<div class="highlight"><pre><span></span><code>Hexdumps data at the specified address (or at $sp)
-</code></pre></div>
-<h2 id="dt-type">dt [type]</h2>
-<div class="highlight"><pre><span></span><code> 以某种形式dump数据
-</code></pre></div>
-<h2 id="print-x-function_name">print /x &amp;function_name</h2>
-<div class="highlight"><pre><span></span><code>symbols地址
-</code></pre></div>
-<h2 id="gotplt">got/plt</h2>
-<div class="highlight"><pre><span></span><code>查看这两个表
-</code></pre></div>
-<h2 id="fsbase">fsbase</h2>
-<div class="highlight"><pre><span></span><code>fsbase的地址
-</code></pre></div>
+<p>前进 ctrl+enter</p>
+<p>后退 esc</p>
+<p>x 查找引用</p>
+<p>Alt+M - Set bookmark</p>
+<p>Ctrl+M - List bookmarks</p>
+<p>alt+t search</p>
+<p>对着你要修改的变量按快捷键y，输⼊你要改成的变量类型</p>
+<p>export data: in edit tag</p>
+<p>ctrl+s 跳转到段</p>
 
 
 
@@ -1378,10 +1042,10 @@ Recursively dereferences pointers starting at the specified address ($sp by defa
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
     
   </body>
