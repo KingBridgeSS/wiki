@@ -518,8 +518,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pojonode" class="md-nav__link">
-    POJONode
+  <a href="#springbootpojonode" class="md-nav__link">
+    (springboot)POJONode
   </a>
   
 </li>
@@ -1310,8 +1310,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pojonode" class="md-nav__link">
-    POJONode
+  <a href="#springbootpojonode" class="md-nav__link">
+    (springboot)POJONode
   </a>
   
 </li>
@@ -1583,11 +1583,12 @@
 <span class="n">JSONObject</span><span class="w"> </span><span class="n">jo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">();</span>
 <span class="n">jo</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;oops&quot;</span><span class="p">,</span><span class="n">templates</span><span class="p">);</span>
 </code></pre></div>
-<h3 id="pojonode">POJONode</h3>
+<h3 id="springbootpojonode">(springboot)POJONode</h3>
 <p><code>com.fasterxml.jackson.databind.node.POJONode</code></p>
 <div class="highlight"><pre><span></span><code><span class="n">Object</span><span class="w"> </span><span class="n">templates</span><span class="o">=</span><span class="n">getTemplatesImpl</span><span class="p">();</span>
 <span class="n">POJONode</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">POJONode</span><span class="p">(</span><span class="n">templates</span><span class="p">);</span>
 </code></pre></div>
+<p>需要重写<code>com.fasterxml.jackson.databind.node.BaseJsonNode#writeReplace</code>，删掉这个方法即可。</p>
 <h2 id="readobject2tostring">readObject2toString</h2>
 <h3 id="jdkxstring">(JDK)XString</h3>
 <p><code>com.sun.org.apache.xpath.internal.objects.XString</code></p>
@@ -1794,17 +1795,19 @@
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAccessible</span><span class="p">(</span><span class="n">AccessibleObject</span><span class="w"> </span><span class="n">member</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">versionStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&quot;java.version&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">javaVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">versionStr</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="s">&quot;\\.&quot;</span><span class="p">)</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">javaVersion</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="c1">// quiet runtime warnings from JDK9+</span>
-<span class="c1">//            Permit.setAccessible(member);</span>
-<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="c1">// not possible to quiet runtime warnings anymore...</span>
-<span class="w">            </span><span class="c1">// see https://bugs.openjdk.java.net/browse/JDK-8210522</span>
-<span class="w">            </span><span class="c1">// to understand impact on Permit (i.e. it does not work</span>
-<span class="w">            </span><span class="c1">// anymore with Java &gt;= 12)</span>
-<span class="w">            </span><span class="n">member</span><span class="p">.</span><span class="na">setAccessible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">        </span><span class="n">member</span><span class="p">.</span><span class="na">setAccessible</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="c1">//        if (javaVersion &lt; 12) {</span>
+<span class="c1">//            // quiet runtime warnings from JDK9+</span>
+<span class="c1">////            Permit.setAccessible(member);</span>
+<span class="c1">//        } else {</span>
+<span class="c1">//            // not possible to quiet runtime warnings anymore...</span>
+<span class="c1">//            // see https://bugs.openjdk.java.net/browse/JDK-8210522</span>
+<span class="c1">//            // to understand impact on Permit (i.e. it does not work</span>
+<span class="c1">//            // anymore with Java &gt;= 12)</span>
+<span class="c1">//            member.setAccessible(true);</span>
+<span class="c1">//        }</span>
+<span class="w">    </span><span class="p">}</span><span class="w">   </span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Field</span><span class="w"> </span><span class="nf">getField</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Class</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">clazz</span><span class="p">,</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">fieldName</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
